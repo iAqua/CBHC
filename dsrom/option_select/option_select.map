@@ -1,0 +1,418 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memcmp.o)
+                              d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o (memcmp)
+c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memcpy.o)
+                              d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o (memcpy)
+c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memset.o)
+                              d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o (memset)
+c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strchr.o)
+                              d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o (strchr)
+c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strcpy.o)
+                              d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o (strcpy)
+c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strlen.o)
+                              d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o (strlen)
+c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strstr.o)
+                              d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o (strstr)
+c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memchr.o)
+                              c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strstr.o) (memchr)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/crt0.o
+LOAD d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o
+Address of section .text set to 0x1808000
+LOAD c:/Soft/devkitPro/devkitPPC/lib/gcc/powerpc-eabi/6.2.0\libgcc.a
+LOAD c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a
+                [!provide]                PROVIDE (__stack, 0x0)
+                [!provide]                PROVIDE (___stack, 0x0)
+                [!provide]                PROVIDE (__executable_start, 0x1800000)
+                0x01800054                . = (0x1800000 + SIZEOF_HEADERS)
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rela.dyn       0x01800054        0x0
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.got1)
+ *(.rela.got2)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+                [!provide]                PROVIDE (__rela_iplt_start, .)
+ *(.rela.iplt)
+ .rela.iplt     0x01800054        0x0 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/crt0.o
+                [!provide]                PROVIDE (__rela_iplt_end, .)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT(.init))
+
+.text           0x01808000     0x174c
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ *(.text.hot .text.hot.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x01808000        0xc d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/crt0.o
+                0x01808000                _start
+ .text          0x0180800c      0x860 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o
+                0x0180800c                __main
+ .text          0x0180886c        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memcmp.o)
+ .text.memcmp   0x0180886c       0x94 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memcmp.o)
+                0x0180886c                memcmp
+ .text          0x01808900        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memcpy.o)
+ .text.memcpy   0x01808900       0xfc c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memcpy.o)
+                0x01808900                memcpy
+ .text          0x018089fc        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memset.o)
+ .text.memset   0x018089fc      0x114 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memset.o)
+                0x018089fc                memset
+ .text          0x01808b10        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strchr.o)
+ .text.strchr   0x01808b10      0x174 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strchr.o)
+                0x01808b10                strchr
+ .text          0x01808c84        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strcpy.o)
+ .text.strcpy   0x01808c84       0x70 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strcpy.o)
+                0x01808c84                strcpy
+ .text          0x01808cf4        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strlen.o)
+ .text.strlen   0x01808cf4       0xa8 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strlen.o)
+                0x01808cf4                strlen
+ .text          0x01808d9c        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strstr.o)
+ .text.critical_factorization
+                0x01808d9c      0x118 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strstr.o)
+ .text.two_way_long_needle
+                0x01808eb4      0x3e0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strstr.o)
+ .text.strstr   0x01809294      0x3cc c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strstr.o)
+                0x01809294                strstr
+ .text          0x01809660        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memchr.o)
+ .text.memchr   0x01809660       0xec c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memchr.o)
+                0x01809660                memchr
+ *(.gnu.warning)
+ *(.glink)
+ .glink         0x0180974c        0x0 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/crt0.o
+
+.fini
+ *(SORT(.fini))
+                [!provide]                PROVIDE (__etext, .)
+                [!provide]                PROVIDE (_etext, .)
+                [!provide]                PROVIDE (etext, .)
+
+.rodata         0x0180974c      0x308
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x0180974c      0x110 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o
+ .rodata.str1.4
+                0x0180985c      0x1f8 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o
+                                0x1f5 (size before relaxing)
+
+.rodata1
+ *(.rodata1)
+
+.sdata2         0x01809a54        0x0
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+ .sdata2        0x01809a54        0x0 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/crt0.o
+
+.sbss2
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+ *(.eh_frame_entry .eh_frame_entry.*)
+
+.eh_frame       0x01809a54        0x0
+ *(.eh_frame)
+ .eh_frame      0x01809a54        0x0 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/crt0.o
+ *(.eh_frame.*)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+                0x01819a54                . = DATA_SEGMENT_ALIGN (0x10000, 0x10000)
+
+.eh_frame
+ *(.eh_frame)
+ *(.eh_frame.*)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x01819a54        0x0
+                [!provide]                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+                [!provide]                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x01819a54        0x0
+                [!provide]                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*) SORT(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+                [!provide]                PROVIDE (__init_array_end, .)
+
+.fini_array     0x01819a54        0x0
+                [!provide]                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*) SORT(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+                [!provide]                PROVIDE (__fini_array_end, .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*)
+
+.fixup
+ *(.fixup)
+
+.got1
+ *(.got1)
+
+.got2
+ *(.got2)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+                0x01819a54                . = DATA_SEGMENT_RELRO_END (., 0x0)
+
+.plt
+ *(.plt)
+
+.data           0x01819a54        0x0
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x01819a54        0x0 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/crt0.o
+ .data          0x01819a54        0x0 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o
+ .data          0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memcmp.o)
+ .data          0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memcpy.o)
+ .data          0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memset.o)
+ .data          0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strchr.o)
+ .data          0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strcpy.o)
+ .data          0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strlen.o)
+ .data          0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strstr.o)
+ .data          0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memchr.o)
+
+.data1
+ *(.data1)
+
+.got
+ *(.got)
+
+.sdata          0x01819a54        0x0
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x01819a54        0x0 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/crt0.o
+                0x01819a54                _edata = .
+                [!provide]                PROVIDE (edata, .)
+                0x01819a54                . = .
+                0x01819a54                __bss_start = .
+
+.sbss           0x01819a54        0x0
+                [!provide]                PROVIDE (__sbss_start, .)
+                [!provide]                PROVIDE (___sbss_start, .)
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ *(.scommon)
+                [!provide]                PROVIDE (__sbss_end, .)
+                [!provide]                PROVIDE (___sbss_end, .)
+
+.plt
+ *(.plt)
+
+.iplt           0x01819a60        0x0
+ *(.iplt)
+ .iplt          0x01819a60        0x0 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/crt0.o
+
+.bss            0x01819a54        0x0
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x01819a54        0x0 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/crt0.o
+ .bss           0x01819a54        0x0 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o
+ .bss           0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memcmp.o)
+ .bss           0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memcpy.o)
+ .bss           0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memset.o)
+ .bss           0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strchr.o)
+ .bss           0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strcpy.o)
+ .bss           0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strlen.o)
+ .bss           0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strstr.o)
+ .bss           0x01819a54        0x0 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memchr.o)
+ *(COMMON)
+                0x01819a54                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x01819a54                . = ALIGN (0x4)
+                0x01819a54                . = SEGMENT_START ("ldata-segment", .)
+                0x01819a54                . = ALIGN (0x4)
+                0x01819a54                __end = .
+                0x01819a54                _end = .
+                [!provide]                PROVIDE (end, .)
+                0x01819a54                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x22
+ *(.comment)
+ .comment       0x00000000       0x22 d:/1/haxchi-2.5u1_v1.5u1/dsrom/option_select/bin/main.o
+                                 0x23 (size before relaxing)
+ .comment       0x00000022       0x23 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memcmp.o)
+ .comment       0x00000022       0x23 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memcpy.o)
+ .comment       0x00000022       0x23 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memset.o)
+ .comment       0x00000022       0x23 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strchr.o)
+ .comment       0x00000022       0x23 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strcpy.o)
+ .comment       0x00000022       0x23 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strlen.o)
+ .comment       0x00000022       0x23 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-strstr.o)
+ .comment       0x00000022       0x23 c:/Soft/devkitPro/devkitPPC/powerpc-eabi/lib\libc.a(lib_a-memchr.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line .debug_line.* .debug_line_end)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(option_select.elf elf32-powerpc)

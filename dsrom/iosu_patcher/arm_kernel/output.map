@@ -1,0 +1,114 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAMX             0x08135000         0x0000b000         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+
+.text           0x08135000      0xc60
+                0x08135000                __file_start = .
+ build/crt0.o(.init)
+ .init          0x08135000       0x10 build/crt0.o
+ *(.text)
+ .text          0x08135010        0x0 build/crt0.o
+ .text          0x08135010      0x1ac build/elf_patcher.o
+                0x08135090                section_write_bss
+                0x081350c4                section_write
+ .text          0x081351bc       0x40 build/getbins.o
+                0x081351bc                get_titleprot_bin
+                0x081351c8                get_titleprot_bin_len
+                0x081351d0                get_titleprot2_bin
+                0x081351dc                get_titleprot2_bin_len
+                0x081351e4                get_wupserver_bin
+                0x081351f0                get_wupserver_bin_len
+ .text          0x081351fc      0x4b0 build/main.o
+                0x081351fc                _main
+ .text          0x081356ac      0x450 build/reload.o
+                0x081356cc                kernel_launch_ios
+ .text          0x08135afc      0x138 build/utils.o
+                0x08135afc                reverse_memcpy
+ *fill*         0x08135c34        0xc 
+ .text          0x08135c40       0x20 build/mmu.o
+                0x08135c40                disable_mmu
+                0x08135c54                restore_mmu
+
+.glue_7         0x08135c60        0x0
+ .glue_7        0x08135c60        0x0 linker stubs
+
+.glue_7t        0x08135c60        0x0
+ .glue_7t       0x08135c60        0x0 linker stubs
+
+.vfp11_veneer   0x08135c60        0x0
+ .vfp11_veneer  0x08135c60        0x0 linker stubs
+
+.v4_bx          0x08135c60        0x0
+ .v4_bx         0x08135c60        0x0 linker stubs
+
+.iplt           0x08135c60        0x0
+ .iplt          0x08135c60        0x0 build/crt0.o
+
+.rodata         0x08135c60     0x1670
+ *(.rodata*)
+ .rodata        0x08135c60     0x14fc build/getbins.o
+                0x08137158                from_cbhc
+ .rodata        0x0813715c      0x174 build/main.o
+                0x081372d0                __file_end = .
+LOAD build/elf_patcher.o
+LOAD build/getbins.o
+LOAD build/main.o
+LOAD build/reload.o
+LOAD build/utils.o
+LOAD build/mmu.o
+OUTPUT(arm_kernel.elf elf32-bigarm)
+
+.rel.dyn        0x081372d0        0x0
+ .rel.iplt      0x081372d0        0x0 build/crt0.o
+
+.data           0x00000000        0x0
+ .data          0x00000000        0x0 build/crt0.o
+ .data          0x00000000        0x0 build/elf_patcher.o
+ .data          0x00000000        0x0 build/getbins.o
+ .data          0x00000000        0x0 build/main.o
+ .data          0x00000000        0x0 build/reload.o
+ .data          0x00000000        0x0 build/utils.o
+ .data          0x00000000        0x0 build/mmu.o
+
+.igot.plt       0x00000000        0x0
+ .igot.plt      0x00000000        0x0 build/crt0.o
+
+.bss            0x00000000        0x0
+ .bss           0x00000000        0x0 build/crt0.o
+ .bss           0x00000000        0x0 build/elf_patcher.o
+ .bss           0x00000000        0x0 build/getbins.o
+ .bss           0x00000000        0x0 build/main.o
+ .bss           0x00000000        0x0 build/reload.o
+ .bss           0x00000000        0x0 build/utils.o
+ .bss           0x00000000        0x0 build/mmu.o
+
+.ARM.attributes
+                0x00000000       0x25
+ .ARM.attributes
+                0x00000000       0x17 build/crt0.o
+ .ARM.attributes
+                0x00000017       0x29 build/elf_patcher.o
+ .ARM.attributes
+                0x00000040       0x29 build/getbins.o
+ .ARM.attributes
+                0x00000069       0x27 build/main.o
+ .ARM.attributes
+                0x00000090       0x27 build/reload.o
+ .ARM.attributes
+                0x000000b7       0x27 build/utils.o
+ .ARM.attributes
+                0x000000de       0x19 build/mmu.o
+
+.comment        0x00000000       0x22
+ .comment       0x00000000       0x22 build/elf_patcher.o
+                                 0x23 (size before relaxing)
+ .comment       0x00000022       0x23 build/getbins.o
+ .comment       0x00000022       0x23 build/main.o
+ .comment       0x00000022       0x23 build/reload.o
+ .comment       0x00000022       0x23 build/utils.o
